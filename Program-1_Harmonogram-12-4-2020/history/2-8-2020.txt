@@ -1,0 +1,1 @@
+[[0, "nothing"], [1, "nothing"], [2, "nothing"], [3, "nothing"], [4, "nothing"], [5, "nothing"], [6, "nothing"], [7, "nothing"], [8, "other"], [9, "nothing"], [10, "nothing"], [11, "nothing"], [12, "other"], [13, "other"], [14, "school"], [15, "school"], [16, "other"], [17, "programing"], [18, "rest"], [19, "rest"], [20, "rest"], [21, "nothing"], [22, "nothing"], [23, "nothing"]]
