@@ -1,0 +1,702 @@
+/*  CSS  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(42,42,42);
+    font-family: "Times New Roman, serif";
+}
+main {
+    /*border: red 1px solid;*/
+    position: relative;
+}
+/*##########################################################               */
+/*########################################################## HEADER        */
+/*##########################################################              */
+
+/*##########################################Návigácia      */
+nav {
+    /*border: red 1px solid;*/
+    position: fixed;
+    width: 100%;
+    z-index:100;
+    height: 90px;
+    transition: 0.6s;
+    transition-delay: 0s;
+}
+nav.scrolnute {
+    background-color: rgba(55,55,55, 0.9);
+    transition: 0.4s;
+}
+nav .logo {
+    /*border: red 1px solid;*/
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 7%;
+}
+
+nav .navigacia {
+    /*border: red 1px solid;*/
+    position: absolute;
+    width:67%;
+    top: 20%;
+    right: 0%;
+    text-align: center;
+    list-style-type: none;
+}
+nav .navigacia .link {
+    /*border: red 1px solid;*/
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    transform: translateX(-30px);
+
+}
+nav .navigacia .link a {
+    color: white;
+    font-family: "Brush Script MT";
+    font-style: italic;
+    font-size: 40px;
+    text-decoration: none;
+}
+nav .navigacia .link a img {
+    padding-right: 5px;
+    transform: translateY(4px);
+}
+nav .navigacia #link_oznacenie {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    height: 5px;
+    width: 0%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+nav .nav_icon {
+    display: none;
+}
+.mobil_tien {
+    display: none;
+}
+/*##########################################Uvodný obrázok a nadpis stránky/podstránky      */
+
+.uvod {
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.uvod img {
+    position: relative;
+    transform: translateY(-80px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.uvod h1, h2 {
+    position: absolute;
+    color: white;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 100px;
+    font-family: "Monotype Corsiva";
+    transition: 1s;
+}
+/*##########################################################               */
+/*########################################################## SEKCIE        */
+/*##########################################################               */
+
+/*##########################################O mne sekcia   */
+.omne_sekcia {
+    /*border: red 1px solid;*/
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 700px;
+    padding: 80px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.omne_sekcia .omne_obrazok {
+    /*border: red 1px solid;*/
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-image: url("../Obrazky/omne_obrazok.png");
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s;
+}
+.omne_sekcia_text {
+    /*border: red 1px solid;*/
+    position: relative;
+    width: 50%;
+    align-self: center;
+    margin-left: 40px;
+    max-width: 600px;
+}
+.omne_sekcia_text h3 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.omne_sekcia_text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/*##########################################Moje záľuby sekcia  - extrémny chaos */
+.zaluby_sekcia {
+    display: flex;
+    position: relative;
+    width: 100%;
+    color: white;
+    height: 1300px;
+
+}
+.zaluby_sekcia ul.zaluby_sekcia_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+.zaluby_sekcia ul .zaluby_sekcia_list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 80%;
+    list-style-type: none;
+}
+
+.zaluby_sekcia ul li.zaluby_sekcia_list_sekcie {
+    flex-basis: 100%;
+    list-style-type: none;
+}
+.zaluby_sekcia ul li .zaluby_sekcia_nadpis{
+
+    width: 700px;
+    margin: auto;
+    background-color: #343434;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.zaluby_sekcia ul li ul:not(.zaluby_zoznam) {
+
+    display: flex;
+    margin:auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.zaluby_sekcia ul li ul .zaluby_sekcia_podlist{
+    display: flex;
+    background-color: #3E3E3E;
+}
+.zaluby_sekcia ul li ul li {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E3E3E;
+    align-items: center;
+}
+.zaluby_sekcia ul li ul li img {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 250px;
+}
+.zaluby_sekcia ul li ul li .zaluby_text {
+    position: relative;
+    max-width: 300px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+
+}
+.zaluby_sekcia ul li ul .zaluby_text h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+
+}
+.zaluby_zoznam {
+    text-align: left;
+    list-style-type: circle;
+}
+.zaluby_zoznam_li {
+    list-style-type: circle;
+    text-align: left;
+}
+.zaluby_zoznam_nad_li {
+    width: 350px;
+    text-align: center;
+}
+/*##########################################Fotogaléria sekcia   */
+
+.fotogaleria_sekcia {
+    /*border: red 1px solid;*/
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+}
+
+.foto_expandujuci_kontainer {
+    /*border: red 1px solid;*/
+    display: flex;
+    width: 80%;
+    margin: 80px 10% 40px 10%;
+    height: 500px;
+}
+
+.foto_expandujuci_kontainer .fotogaleria_fotka1 {
+    background-image: url("../Obrazky/fotogaleria_obrazok1.png");
+}
+.foto_expandujuci_kontainer .fotogaleria_fotka2 {
+    background-image: url("../Obrazky/fotogaleria_obrazok2.png");
+}
+.foto_expandujuci_kontainer .fotogaleria_fotka3 {
+    background-image: url("../Obrazky/fotogaleria_obrazok3.png");
+}
+.foto_expandujuci_kontainer .fotogaleria_fotka4 {
+    background-image: url("../Obrazky/fotogaleria_obrazok4.png");
+}
+.foto_expandujuci_kontainer .fotogaleria_fotka5 {
+    background-image: url("../Obrazky/fotogaleria_obrazok5.png");
+}
+
+.foto_expandujuci_kontainer .slide {
+    cursor: pointer;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 0.5;
+    transition: 1s;
+}
+.foto_expandujuci_kontainer .slide.aktivna {
+    flex: 2.5;
+    transition: 1s;
+}
+/*############# 2. kontainer*/
+.foto_2kontainer {
+    /*border: red 1px solid;*/
+    display: flex;
+    width: 80%;
+    margin: 40px 10% 80px 10%;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.foto_2kontainer .fotogaleria_fotka6 {
+    background-image: url("../Obrazky/fotogaleria_obrazok6.png");
+}
+.foto_2kontainer .fotogaleria_fotka7 {
+    background-image: url("../Obrazky/fotogaleria_obrazok7.png");
+}
+.foto_2kontainer .fotogaleria_fotka8 {
+    background-image: url("../Obrazky/fotogaleria_obrazok8.png");
+}
+
+.foto_2kontainer .foto_2sekcia_foto {
+    /*border: red 1px solid;*/
+    position: relative;
+    cursor: pointer;
+    height: 325px;
+    width: 325px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin: 20px 20px;
+    transition: 1s;
+}
+.foto_2kontainer .foto_2sekcia_foto:hover {
+    background-size: cover;
+}
+
+
+/*##########################################Prazdniny sekcia   */
+
+.prezdniny_sekcia {
+    display: flex;
+    text-align: center;
+    max-width: 85%;
+    margin: auto;
+    padding: 100px;
+    color: white;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.prezdniny_sekcia h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.prezdniny_sekcia p {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+
+.prezdniny_sekcia .prazdniny_foto1 {
+    background-image: url("../Obrazky/prazdniny_obrazok1.png");
+}
+.prezdniny_sekcia .prazdniny_foto2 {
+    background-image: url("../Obrazky/prazdniny_obrazok2.png");
+}
+.prezdniny_sekcia .prazdniny_foto3 {
+    background-image: url("../Obrazky/prazdniny_obrazok3.png");
+}
+
+.prezdniny_sekcia div {
+    /*border: red 1px solid;*/
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*##########################################################               */
+/*########################################################## PÄTA          */
+/*##########################################################               */
+
+footer {
+    /*border: red 1px solid;*/
+    position: relative;
+    background-color: rgb(50,50,50);
+    height: 115px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    font-size: 20px;
+}
+footer a {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    margin: 22px 25px 5px 25px;
+}
+.footer_icon {
+    width: 30px;
+    height: 30px;
+}
+.facebook_icon {
+    background-image: url("../Obrazky/facebook_icon.png");
+}
+.instagram_icon {
+    background-image: url("../Obrazky/instagram_icon.png");
+}
+.twitter_icon {
+    background-image: url("../Obrazky/twitter_icon.png");
+}
+.youtube_icon {
+    background-image: url("../Obrazky/youtube_icon.png");
+}
+footer a .facebook_icon:hover {
+    /*box-shadow: 0 0 20px #3A5795, 0 0 20px #3A5795;*/
+    background-image: url("../Obrazky/facebook_icon_active.png");
+}
+footer a .instagram_icon:hover {
+    /*box-shadow: 0 0 20px #e352e3,0 0 25px #e352e3;*/
+    background-image: url("../Obrazky/instagram_icon_active.png");
+}
+footer a .twitter_icon:hover {
+    /*box-shadow: 0 0 25px #1DA1F2, 0 0 20px #53aee6;*/
+    background-image: url("../Obrazky/twitter_icon_active.png");
+}
+footer a .youtube_icon:hover {
+    /*box-shadow: 0 0 20px #ff8585;*/
+    background-image: url("../Obrazky/youtube_icon_active.png");
+}
+/*##########################################################                          */
+/*########################################################## svietiacihover           */
+/*##########################################################                          */
+.svietiaci_hover.s_h_cervenomodry:hover::before {
+    background-image: linear-gradient(45deg, #6c0000 , #f00505, #1b03eb, #0b0066, #6c0000 , #f00505, #1b03eb, #0b0066);
+}
+.svietiaci_hover.s_h_duhovy:hover::before {
+    background-image: linear-gradient(45deg,#fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+}
+.svietiaci_hover.s_h_cerveny:hover::before {
+    background-image: linear-gradient(45deg,#600000, #b91616, #ff0000, #b82222, #600000, #b91616, #ff0000, #b82222);
+}
+.svietiaci_hover.s_h_kruh:hover::before {
+    border-radius: 50%;
+}
+
+.svietiaci_hover:hover::before {
+    position: absolute;
+    transition: 1s;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-size: 400%;
+    z-index: -1;
+    animation: animate 15s linear infinite;
+    filter: blur(15px);
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 200% 0;
+    }
+    100%{
+        background-position: 0% 0;
+    }
+}
+/*#######################################################################################                          */
+/*#######################################################################################                          */
+/*####################################################################################### Responzívny design       */
+/*#######################################################################################                          */
+/*#######################################################################################                          */
+
+@media screen and (max-width: 1300px) {
+    nav .logo {
+        top: 22px;
+        left: 3%;
+    }
+    nav .logo img{
+        width: 280px;
+    }
+    nav .navigacia {
+        top: 30%;
+        width: 67%;
+        right: 1%;
+    }
+    nav .navigacia .link {
+
+        margin-left: 5px;
+        margin-right: 5px;
+        transform: translateX(0px);
+
+    }
+    nav .navigacia .link a {
+        font-size: 35px;
+    }
+    nav .navigacia .link a img {
+        width: 32px;
+    }
+
+    nav .navigacia #link_oznacenie {
+        top: 44px;
+        height: 4px;
+        transform: translateX(+30px);
+    }
+}
+@media screen and (max-width: 1000px) {
+    .uvod h1, h2 {
+        text-align: center;
+        font-size: 80px;
+        max-width: 365px;
+    }
+    .uvod h2 {
+        top: 40%;
+        font-size: 60px;
+    }
+
+    .omne_sekcia {
+        flex-direction: column;
+        height: 900px;
+        padding: 10px;
+    }
+    .omne_obrazok {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .omne_sekcia_text {
+        width: 70%;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+
+    .prezdniny_sekcia {
+
+        max-width: 75%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 0px;
+    }
+    .prezdniny_sekcia p {
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    .prezdniny_sekcia .prazdniny_foto2 {
+        display: none;
+        background-image: url("../Obrazky/prazdniny_obrazok2.png");
+    }
+    .prezdniny_sekcia .prazdniny_foto3 {
+        display: none;
+        background-image: url("../Obrazky/prazdniny_obrazok3.png");
+    }
+
+
+    .foto_expandujuci_kontainer {
+        height: 400px;
+    }
+    .foto_expandujuci_kontainer .slide {
+        flex: 0.35;
+    }
+
+    .foto_expandujuci_kontainer .fotogaleria_fotka4 {
+        display: none;
+    }
+    .foto_expandujuci_kontainer .fotogaleria_fotka5 {
+        display: none;
+    }
+
+    nav .navigacia {
+        /*border: red 1px solid;*/
+        display: block;
+        position: absolute;
+        background-color: rgba(55,55,55, 0.9);
+        overflow: hidden;
+        right: 0px;
+        top: 90px;
+        width: 55px;
+        height: 0px;
+        text-align: initial;
+        transition: height 0.4s, width 0.4s;
+        transition-delay: 0.4s, 0s;
+    }
+    nav.nav_aktivna .navigacia{
+        /*border: red 1px solid;*/
+        width: 200px;
+        height: 240px;
+        transition: height 0.5s, width 0.5s;
+        transition-delay: 0s, 0.75s;
+    }
+    nav .navigacia .link {
+        /*border: red 1px solid;*/
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        position: initial;
+        height: 60px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        transform: initial;
+        transition: 1.5s;
+    }
+
+    nav .navigacia .link:hover {
+        background-color: rgba(0, 106, 199, 0.9);
+        transition: 0.1s;
+    }
+    nav .navigacia .link a {
+        /*color: white;*/
+        /*font-family: "Brush Script MT";*/ /*možno zmeniť*/
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        align-items: center;
+        font-style: initial;
+        font-size: 30px;
+        flex: 0 0 auto;
+    }
+    nav .navigacia .link a img {
+        width: 40px;
+        height: 40px;
+        margin: 10px 7px;
+        margin-right: 15px;
+        padding-right: initial;
+        transform: initial;
+        align-self: center;
+    }
+    nav .navigacia #link_oznacenie {
+        display: none;
+    }
+    nav .nav_icon {
+        display: block;
+        position: absolute;
+        background-image: url("../Obrazky/nav_icon.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 50%;
+        width: 38px;
+        height: 38px;
+        transform: translateY(-45%);
+        right: 45px;
+        margin: auto;
+        cursor: pointer;
+    }
+    .mobil_tien{
+        display: block;
+        position: fixed;
+        top: 90px;
+        width: 100%;
+        height: 0vh;
+        background-color: rgba(62, 62, 62, 0.0);
+        z-index: 50;
+        transition: background-color 1s;
+    }
+    .mobil_tien.aktivna_m_t {
+        display: block;
+        position: fixed;
+        top: 90px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(62, 62, 62, 0.4);
+        z-index: 50;
+        transition: background-color 1s;
+    }
+
+
+}
+
+@media screen and (max-width: 717px) {
+    .zaluby_sekcia {
+        height: 2200px;
+    }
+    .zaluby_sekcia ul li .zaluby_sekcia_nadpis{
+
+        width: 352px;
+        margin: auto;
+    }
+}
